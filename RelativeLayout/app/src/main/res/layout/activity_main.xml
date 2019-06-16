@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv.test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <!--아이디를 기준으로 아래에 위치-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv.test"
+        android:text="Hello World!2" />
+
+    <RelativeLayout
+        android:id="@+id/layout_centet"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#ff0000">
+
+        <!--부모가 RelativeLayout임
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:text="Hello Center!"/>-->
+    </RelativeLayout>
+
+    <!--밖에서도 아이디 지정을 통해 RelativeLayout을 부모로 만듬-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/layout_centet"
+        android:layout_alignTop="@id/layout_centet"
+        android:text="Hello Center!!" />
+
+    <!--아이디를 기준으로 왼쪽에 위치-->
+    <TextView
+        android:layout_toLeftOf="@id/rightBottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Android!!!!!!!!!!!!!!!!!" />
+
+    <TextView
+        android:id="@+id/rightBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Hello Android!!!!!!!!!!!!" />
+
+</RelativeLayout>
